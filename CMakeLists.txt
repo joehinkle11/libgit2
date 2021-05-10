@@ -108,6 +108,17 @@ SET(LIBGIT2_VERSION_STRING "${LIBGIT2_VERSION_MAJOR}.${LIBGIT2_VERSION_MINOR}.${
 FILE(STRINGS "${libgit2_SOURCE_DIR}/include/git2/version.h" GIT2_HEADER_SOVERSION REGEX "^#define LIBGIT2_SOVERSION [0-9]+$")
 STRING(REGEX REPLACE "^.*LIBGIT2_SOVERSION ([0-9]+)$" "\\1" LIBGIT2_SOVERSION "${GIT2_HEADER_SOVERSION}")
 
+
+# extra includes
+include_directories("/Users/joe/Documents/tests/SwiftGit3/External/libssh2-ios/include")
+# definitions
+ADD_DEFINITIONS(-DSSH_MEMORY_CREDENTIALS)
+ADD_DEFINITIONS(-D_SSH_MEMORY_CREDENTIALS)
+add_compile_definitions(GIT_SSH_MEMORY_CREDENTIALS)
+ADD_DEFINITIONS(-DGIT_SSH)
+ADD_DEFINITIONS(-D_GIT_SSH)
+add_compile_definitions(GIT_SSH)
+
 # Platform specific compilation flags
 IF (MSVC)
 	ADD_DEFINITIONS(-D_SCL_SECURE_NO_WARNINGS)

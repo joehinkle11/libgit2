@@ -401,7 +401,8 @@ IF (${CMAKE_VERSION} VERSION_LESS 2.8.12)
 	INCLUDE_DIRECTORIES(${LIBGIT2_INCLUDES})
 ELSE()
 	TARGET_INCLUDE_DIRECTORIES(git2internal
-		PRIVATE /Users/joe/Documents/tests/SwiftGit3/External/libssh2-ios/include/libssh2
+        PRIVATE /Users/joe/Documents/tests/SwiftGit3/External/libssh2-ios/include/libssh2
+        PRIVATE /Users/joe/Documents/tests/SwiftGit3/External/ios-openssl/include/openssl
 	    PRIVATE ${LIBGIT2_INCLUDES}
 	    PUBLIC ${libgit2_SOURCE_DIR}/include)
 ENDIF()

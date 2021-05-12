@@ -111,6 +111,9 @@ STRING(REGEX REPLACE "^.*LIBGIT2_SOVERSION ([0-9]+)$" "\\1" LIBGIT2_SOVERSION "$
 
 # extra includes
 include_directories("/Users/joe/Documents/tests/SwiftGit3/External/libssh2-ios/include")
+include_directories("/Users/joe/Documents/tests/SwiftGit3/External/ios-openssl/include")
+include_directories("/Users/joe/Documents/tests/SwiftGit3/External/libssh2-ios/include/libssh2")
+include_directories("/Users/joe/Documents/tests/SwiftGit3/External/ios-openssl/include/openssl")
 # definitions
 ADD_DEFINITIONS(-DSSH_MEMORY_CREDENTIALS)
 ADD_DEFINITIONS(-D_SSH_MEMORY_CREDENTIALS)
